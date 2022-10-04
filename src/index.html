@@ -1,49 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="scss/main.scss" />
+    >
+    <link rel="stylesheet" href="scss/main.scss" >
     <script defer src="./script.js"></script>
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
   <body>
     <nav class="nav">
-      <img class="nav__logo" src="./images/logo.svg" alt="snap logo" />
+      <img class="nav__logo" src="./images/logo.svg" alt="snap logo" >
       <button class="nav__hamburger">
-        <img src="./images/icon-menu.svg" alt="open menu icon" />
+        <img
+          class="nav__hamburger-open"
+          src="./images/icon-menu.svg"
+          alt="open menu icon"
+        >
+        <img
+          class="nav__hamburger-close nav__hamburger-close--hide"
+          src="./images/icon-close-menu.svg"
+          alt="close menu icon"
+        >
       </button>
-      <ul class="nav__menu">
+      <ul class="nav__menu nav__menu--hide">
         <li class="nav__item">
           <a class="nav__item-anchor" href="#Features">Features</a>
           <img
-            class="nav__item-arrow"
+            class="nav__item-arrow nav__item-arrow-down"
             src="./images/icon-arrow-down.svg"
             alt="arrow down icon"
-          />
-          <ul class="nav__item-list">
+          >
+          <img
+            class="nav__item-arrow nav__item-arrow-up nav__item-arrow-up--hide"
+            src="./images/icon-arrow-up.svg"
+            alt="arrow up icon"
+          >
+          <ul class="nav__item-list nav__item-list-1">
             <li class="nav__item-list-el">
               <img
                 class="nav__item-list-el-img"
                 src="./images/icon-todo.svg"
                 alt="note icon"
-              />
-              <a class="nav__item-list-anchor" href="#Todo-List"
-                >Todo List</a
               >
+              <a class="nav__item-list-anchor" href="#Todo-List">Todo List</a>
             </li>
             <li class="nav__item-list-el">
               <img
                 class="nav__item-list-el-img"
                 src="./images/icon-calendar.svg"
                 alt="calendar icon"
-              />
+              >
               <a class="nav__item-list-anchor" href="#Calendar">Calendar</a>
             </li>
             <li class="nav__item-list-el">
@@ -51,17 +63,15 @@
                 class="nav__item-list-el-img"
                 src="./images/icon-reminders.svg"
                 alt="notification icon"
-              />
-              <a class="nav__item-list-anchor" href="#Reminders"
-                >Reminders</a
               >
+              <a class="nav__item-list-anchor" href="#Reminders">Reminders</a>
             </li>
             <li class="nav__item-list-el">
               <img
                 class="nav__item-list-el-img"
                 src="./images/icon-planning.svg"
                 alt="clock icon"
-              />
+              >
               <a class="nav__item-list-anchor" href="#Planning">Planning</a>
             </li>
           </ul>
@@ -72,8 +82,13 @@
             class="nav__item-arrow"
             src="./images/icon-arrow-down.svg"
             alt="arrow down icon"
-          />
-          <ul class="nav__item-list">
+          >
+          <img
+            class="nav__item-arrow nav__item-arrow-up nav__item-arrow-up--hide"
+            src="./images/icon-arrow-up.svg"
+            alt="arrow up icon"
+          >
+          <ul class="nav__item-list nav__item-list-2">
             <li class="nav__item-list-el">
               <a class="nav__item-list-anchor" href="#History">History</a>
             </li>
@@ -104,12 +119,12 @@
         class="hero__img-mobile"
         src="./images/image-hero-mobile.png"
         alt="a men working on laptop"
-      />
+      >
       <img
         class="hero__img-desktop"
         src="./images/image-hero-desktop.png"
         alt="a men working on laptop"
-      />
+      >
       <article class="hero__content">
         <h1 class="hero__title">Make remote work</h1>
         <p class="hero__info">
@@ -122,22 +137,22 @@
             class="hero__clients-img"
             src="./images/client-databiz.svg"
             alt="databiz company logo"
-          />
+          >
           <img
             class="hero__clients-img"
             src="./images/client-audiophile.svg"
             alt="audiophile company logo"
-          />
+          >
           <img
             class="hero__clients-img"
             src="./images/client-meet.svg"
             alt="meet company logo"
-          />
+          >
           <img
             class="hero__clients-img"
             src="./images/client-maker.svg"
             alt="maker company logo"
-          />
+          >
         </div>
       </article>
     </main>
