@@ -1,0 +1,38 @@
+@use "./utils/variables" as *;
+
+.hero {
+
+    &__img {
+
+        &-mobile {
+
+        }
+        
+        &-desktop {
+            
+        }
+    }
+    
+    &__content {
+
+    }
+
+    &__title {
+
+    }
+
+    &__info {
+
+    }
+
+    &__btn {
+
+    }
+
+    &__clients {
+
+        &-img {
+
+        }
+    }
+}

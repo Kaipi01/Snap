@@ -1,0 +1,38 @@
+@use "./utils/variables" as *;
+
+.nav {
+
+    &__logo {
+
+    }
+
+    &__hamburger {
+
+    }
+
+    &__menu {
+
+    }
+
+    &__item {
+
+        &-anchor {
+
+        }
+
+        &-arrow {
+
+        }
+
+        &-list {
+            
+            &-el {
+
+            }
+
+            &-anchor {
+
+            }
+        }
+    }
+}
