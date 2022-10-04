@@ -1,0 +1,19 @@
+@use "./utils/variables" as *;
+@use "./components/buttons";
+@use "./layout/nav";
+@use "./layout/hero";
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: $Almost-White;
+  font-family: $Font-Family;
+  font-size: $Font-Size;
+}
