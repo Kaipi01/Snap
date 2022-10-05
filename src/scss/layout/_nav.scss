@@ -1,38 +1,206 @@
 @use "./utils/variables" as *;
 
 .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 20px;
+  @media (min-width: $Tablet) {
+    padding: 30px 40px;
+  }
 
-    &__logo {
+  &__logo {
+    width: 90px;
+  }
 
+  &__hamburger {
+    z-index: 2;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+      img {
+        opacity: 0.8;
+      }
     }
 
-    &__hamburger {
-
+    img {
+      width: 40px;
     }
 
-    &__menu {
-
+    &-open {
+      &--hide {
+        display: none;
+      }
     }
 
-    &__item {
+    &-close {
+      &--hide {
+        display: none;
+      }
+    }
 
-        &-anchor {
+    @media (min-width: $Tablet) {
+      display: none;
+    }
+  }
 
+  &__menu {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    width: 250px;
+    height: calc(100vmax + 370px);
+    padding: 100px 30px;
+    background-color: $White;
+    font-size: 1rem;
+    list-style: none;
+    gap: 25px;
+
+    &--hide {
+      display: none;
+    }
+
+    @media (min-width: 800px) {
+      height: calc(100vmax + 200px);
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 1px;
+      width: calc(100vw - 250px);
+      height: 100%;
+      transform: translateX(-249px);
+      background-color: rgba(0, 0, 0, 0.767);
+      box-shadow: -3px 0px 0px 0px rgba(0, 0, 0, 0.767);
+    }
+
+    @media (min-width: $Tablet) {
+      display: flex;
+      position: static;
+      flex-direction: row;
+      align-items: center;
+      gap: 35px;
+      width: 100%;
+      height: auto;
+      margin-left: 60px;
+      padding: 0;
+      background-color: transparent;
+
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  &__item {
+    @media (min-width: $Tablet) {
+      position: relative;
+    }
+
+    &:nth-child(5) {
+      align-self: center;
+      margin-top: 20px;
+      margin-bottom: -5px;
+
+      @media (min-width: $Tablet) {
+        margin: 0;
+        margin-right: 0;
+        margin-left: auto;
+      }
+    }
+
+    &-anchor {
+      transition: $Transition;
+      color: $Medium-Gray;
+      text-decoration: none;
+
+      &:hover,
+      &:focus,
+      &:active {
+        padding-bottom: 20px;
+        color: $Almost-Black;
+        & ~ ul {
+          display: flex;
         }
 
-        &-arrow {
-
+        & ~ .nav__item-arrow-down {
+          display: none;
         }
-
-        &-list {
-            
-            &-el {
-
-            }
-
-            &-anchor {
-
-            }
+        & ~ .nav__item-arrow-up {
+          display: inline-block;
         }
+      }
     }
+
+    &-arrow {
+      margin-left: 10px;
+      padding-bottom: 2px;
+
+      @media (min-width: $Tablet) {
+        margin-left: 5px;
+      }
+
+      &-up {
+        display: none;
+      }
+    }
+
+    &-btn {
+      width: 100%;
+      color: $Medium-Gray;
+    }
+
+    &-list {
+      display: none;
+      flex-direction: column;
+      margin-top: 20px;
+      margin-left: 25px;
+      list-style: none;
+      gap: 15px;
+
+      @media (min-width: $Tablet) {
+        position: absolute;
+        right: 0;
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
+        padding: 25px;
+        border-radius: 10px;
+        background-color: $White;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+
+      &--hide {
+        display: none;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        display: flex;
+      }
+
+      &-anchor {
+        transition: $Transition;
+        color: $Medium-Gray;
+        text-decoration: none;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $Almost-Black;
+        }
+      }
+    }
+  }
 }
