@@ -1,1 +1,36 @@
-@use './utils/variables' as *;
+@use "./utils/variables" as *;
+
+.button {
+  padding: 10px 30px;
+  transition: $Transition;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  cursor: pointer;
+
+  &--fill {
+    border: 2px solid $Almost-Black;
+    background-color: $Almost-Black;
+    color: $White;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: 2px solid $Almost-Black;
+      background-color: transparent;
+      color: $Almost-Black;
+    }
+  }
+
+  &--outline {
+    border: 2px solid $Medium-Gray;
+    background-color: transparent;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: $Almost-Black;
+      color: $Almost-Black;
+    }
+  }
+}
