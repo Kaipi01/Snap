@@ -1,38 +1,112 @@
 @use "./utils/variables" as *;
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1250px;
+  margin: 0 auto;
+  text-align: center;
 
-    &__img {
+  @media (min-width: $Tablet) {
+    flex-direction: row;
+    gap: 50px;
+    padding: 0 50px;
+    text-align: start;
+  }
 
-        &-mobile {
+  @media (min-width: $Desktop) {
+    gap: 100px;
+  }
 
+  &__img {
+    &-mobile {
+      width: 100%;
+      max-width: 600px;
+      @media (min-width: $Tablet) {
+        display: none;
+      }
+    }
+
+    &-desktop {
+      display: none;
+      align-self: flex-start;
+      order: 2;
+      width: 40%;
+      @media (min-width: $Tablet) {
+        display: block;
+      }
+    }
+  }
+
+  &__content {
+    max-width: 560px;
+    padding: 15px;
+  }
+
+  &__title {
+    margin-top: 40px;
+    font-size: 2.25rem;
+    @media (min-width: $Tablet) {
+      font-size: 3.5rem;
+    }
+
+    @media (min-width: $Desktop) {
+      font-size: 5rem;
+      text-align: left;
+    }
+  }
+
+  &__info {
+    max-width: 60ch;
+    margin: 15px auto;
+    padding: 10px;
+    color: $Medium-Gray;
+    line-height: 1.5;
+
+    @media (min-width: $Tablet) {
+      padding-left: 0;
+    }
+
+    @media (min-width: $Desktop) {
+      margin: 35px auto;
+    }
+  }
+
+  &__btn {
+    margin-top: 10px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: $Font-Bold;
+  }
+
+  &__clients {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+    padding-bottom: 70px;
+
+    @media (min-width: $Desktop) {
+      justify-content: flex-start;
+      margin-top: 100px;
+      gap: 40px;
+    }
+
+    &-img {
+      width: 75px;
+
+      @media (min-width: $Tablet) {
+        width: 85px;
+      }
+
+      &:nth-child(2) {
+        width: 50px;
+        @media (min-width: $Tablet) {
+          width: 60px;
         }
-        
-        &-desktop {
-            
-        }
+      }
     }
-    
-    &__content {
-
-    }
-
-    &__title {
-
-    }
-
-    &__info {
-
-    }
-
-    &__btn {
-
-    }
-
-    &__clients {
-
-        &-img {
-
-        }
-    }
+  }
 }
